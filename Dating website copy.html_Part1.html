@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harambe lives on</title>
+</head>
+<style>
+    fieldset {
+        background-color: lightyellow;
+        border: 10px solid yellow;
+        margin-bottom: 10px;
+        width: 720px;
+    }
+    label {
+        width: 180px;
+        display:inline-block;
+        width: auto
+    }
+    textarea{
+
+        width:360px;
+        height:50px;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+
+<h2>Please Enter Your Details For Our Dating Website!</h2>
+
+<!--your face-->
+<form>
+    <fieldset>
+        <legend>Your Face</legend>
+        <table>
+            <tr>
+                <td><label>Your image:</label></td>
+                <td><input type="file" id="preview" required></td>
+            <tr>
+                <td><label>Image preview:</label></td>
+                <td><img src="#preview" alt="your image"></td>
+            </tr>
+        </table>
+
+    </fieldset>
+
+
+    <br>
+
+    <!--Your General Details-->
+    <fieldset>
+        <legend>Your General Details</legend>
+        <label>Name:</label><input type="text"><required>
+        <label for="Name"> </label> <input id="Name" type="text" required><br>
+        Gender:<label for="Female"></label> <label for="Male">Male</label><input  id="Female" type="radio"> Female
+        <input id="Male" type="radio"><br>
+        Age: <input id="age" type="text" required><br>
+        Date of birth:<input id="Date of birth" type="date"><br>
+    Favorite Color:<input id="Favorite color" type="color"><br>
+        <td><label for="option1">Which country:</label></td>
+        <td><select id="option1">
+            <option value="USA">USA</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Others">Others</option>
+            <option value="no selection">no selection</option>
+        </select></td>
+
+        </fieldset>
+
+
+
+
+
+
+    <br>
+
+    <!--Your Indicators-->
+    <fieldset>
+        <legend>Your Indicators</legend>
+        Height: Short<label for="Height"></label> <input id="Height" type="range" min="0" max="100">Tall<br>
+        Salary: Poor<label for="Salary"></label><input id="Salary" type="range" min="0" max="100">Rich<br>
+
+
+
+    </fieldset>
+    </br>
+
+    <br>
+
+    <!--Your Contact Information-->
+    <fieldset>
+        <legend>Your Contact Information</legend>
+        Email:<input type="email"><br>
+        Mobile:<input type="mobile"><br>
+        Address:<input type="Address"><br>
+        Method to Contact Me: <input type="Checkbox">E-mail <input type="checkbox">Whatsapp <input type="checkbox">In-app-chat
+
+    </fieldset>
+</form>
+</body>
+</html>
+
+
+

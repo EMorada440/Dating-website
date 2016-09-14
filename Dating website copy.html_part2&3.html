@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dating Website</title>
+    <link rel="stylesheet" type="text/css" href="external.css">
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+<style>
+
+    fieldset {
+        background: lightyellow;
+        border: 10px solid yellow;
+        margin-bottom: 10px;
+        width: 720px;
+    }
+    label{
+        width: 180px;
+        display: inline-block;
+        text-align: right;
+        vertical-align: top;
+    }
+    textarea {
+        width: 360px;
+        height: 50px;
+    }
+    .Info {
+        width: auto;
+    }
+    h4.Salary {
+        display: inline;
+        font-weight: normal;
+        color: white;
+        background-color: purple;
+        border: 2px solid purple;
+        padding-left:7px ;
+        padding-right: 7px;
+        text-align: center;
+    }
+    h4.Height {
+        display: inline;
+        font-weight: normal;
+        color: white;
+        background-color: #a70e03;
+        border: 2px solid #a70e03;
+        vertical-align: top;
+
+    }
+    h4.Poor {
+        display: inline;
+        font-weight: normal;
+        color: white;
+        background-color: #a70e03;
+        border: 2px solid #a70e03;
+        padding-left: 4px;
+        padding-right: 5px;
+        text-align: center;
+        vertical-align: top;
+    }
+    h4.Rich {
+        display: inline;
+        font-weight: normal;
+        color: white;
+        background-color: purple;
+        border: 2px solid purple;
+        padding-left: 4px;
+        padding-right: 5px;
+    }
+
+    input.align {
+        display: table-cell;
+        vertical-align: middle;
+        height: 6px;
+        border: 1px solid ;
+        padding-left: 2.5px;
+    }
+
+    label:hover {font-size: 30px}
+
+    style>,
+     article, aside, figure, footer, header,
+     menu, nav, section { display: block; }
+</style>
+
+
+
+
+
+<h1>Dating Website Information</h1>
+<fieldset>
+    <legend>Your Face</legend>
+    <label for="file" class="label-text"> Your Image:</label>
+    <input type='file' id="file" onchange="readURL(this);" />
+    <br>
+    <label for="blah" class="label-text"> Image preview:</label>
+    <img id="blah" src="#" alt="your image" />
+</fieldset>
+<fieldset>
+    <legend>Your General Details</legend>
+    <label for="Name" class="label-text"> Name:</label>
+    <input type="text" id="Name" name="Name" required><br>
+    <label for="Gender" class="label-text"> Gender:</label>
+    Male<input type="radio" id="Gender" required>
+    Female <input type="radio" required><br>
+    <label for="Age" class="label-text"> Age: </label>
+    <input type="number" id="Age" name="Age" min="18" required><br>
+    <label for="Birth" class="label-text"> Date Of Birth: </label>
+    <input type="date" id="Birth"  required><br>
+    <label for="Color" class="label-text"> Favorite Color: </label>
+    <input type="color" id="Color"><br>
+    <label for="Origin" class="label-text"> Which Country:</label>
+    <select>
+        <option value="No Selection" id="Origin">No Selection</option>
+        <option value="Great Britain">Great Britain</option>
+        <option value="United States of America">United States Of America</option>
+        <option value="Mexico">Mexico</option>
+        <option value="China"> China</option>
+        <option value="Australia">Australia</option>
+    </select>
+</fieldset>
+<fieldset>
+    <legend>Your Indicators</legend>
+
+    <label for="Height" class="label-text"> Height: </label>
+    <h4 class="Height"> Short </h4>
+    <input class="align" type="range" min="0" max="100" id="Height">
+    <h4 class="Salary"> Tall</h4> <br>
+    <label for="Income" class="label-text"> Salary:</label>
+    <h4 class="Poor">Poor</h4>
+    <input  type="range" min="0" max="100" id="Income">
+    <h4 class="Rich">Rich</h4>
+
+</fieldset>
+<fieldset>
+    <legend>Your Contact Information</legend>
+    <label for="email" class="label-text"> Email:</label>
+    <input type="email"  id="email" required><br>
+    <label for="Phone" class="label-text"> Mobile: </label>
+    <input type="tel" id="Phone"><br>
+    <label for="Address" class="label-text"> Address: </label>
+    <textarea id="Address"></textarea><br>
+    <label for="Contact" class="label-text"> Method To Contact You:</label>
+    <input type="checkbox" id="Contact" class="Info" > Email
+    <input type="checkbox" class="Info"> WhatsApp
+    <input type="checkbox" class="Info">In-app chat
+</fieldset>
+
+<input type="submit">
+<script type="text/javascript">
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#blah')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(200);
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+</script>
+
+</body>
+</html>
+
